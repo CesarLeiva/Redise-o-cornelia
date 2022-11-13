@@ -1,0 +1,953 @@
+/*CSS para el cuerpo*/ 
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("../Fondos\ efectos/figuras.png");
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+
+/*CSS de la barra de navegación superior*/
+header nav{
+    z-index: 1;
+    background: white;
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    padding-inline: 5%;
+}
+
+.logo a img{
+    width: 150px;
+    height: auto;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+}
+
+.menu_items{
+    display: flex;
+    list-style: none;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.menu_items li{
+    margin: 0 10px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.opcion{
+    margin-inline: 20px;
+}
+
+.opcion img{
+    height: 30px;
+}
+
+.btn_menu{
+    cursor: pointer;
+    display: none;
+}
+
+.btn_menu img{
+    height: 40px;
+}
+
+ul.show{
+    top: 77px;
+}
+
+/*Parte responsiva de la barra de navegación superior*/
+@media screen and (max-width: 1050px){
+
+    header nav{
+        padding-top: 20px;
+    }
+
+    .logo a img{
+        width: 120px;
+    }
+    
+    .btn_menu{
+        display: inline-flex;
+    }
+    
+    .opcion img{
+        height: 30px;
+    }
+
+    .menu_items{
+        background: white;
+        background-image: url("../Fondos\ efectos/figuras.png");
+        background-size: cover;
+        background-repeat:no-repeat;
+
+        position: fixed;
+        width: 100vw;
+        height: calc(100% - 78.38px);
+        top: -100vh;
+        left: 0;
+        text-align: center;
+        transition: all .4s;
+        flex-direction: column;
+    }
+    
+    .menu_items li{
+        margin: 50px 0 0 0;
+        line-height: 30px;
+    }
+
+    .menu_items li a{
+        font-size: 30px;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 1050px) and (orientation: landscape){
+   .menu_items li{
+        margin: 30px 0 0 0;
+    }
+    .menu_items {
+        overflow: scroll;
+        height: calc(100% - 78.38px);
+    }
+}
+/*Fin del CSS para la barra de navegación superior*/
+
+
+/*CSS para el contenido*/
+
+.contenido{
+    padding-top: 112px
+}
+
+/*presentación*/
+.presentacion{
+    background-image: url("../Fondos efectos/Fondo nuestras bicis.png");
+    margin: 0 auto;
+    width: 1000px;
+    height: 290px;
+    border-radius: 10px;
+    margin-top: 80px;
+}
+
+.presentacion .text{
+    text-align: center;
+    padding: 50px;
+    font-size: 20px;
+    height: inherit;
+}
+
+/*Parte responsiva de la presentación*/
+@media screen and (max-width: 1050px){
+    .presentacion{
+        width: 85vw;
+        height: 50%;
+        border-radius: 10px;
+        margin-top: 0;
+    }
+
+    .presentacion .text{
+        text-align: center;
+        padding-inline: 30px;
+        font-size: 150%;
+        height: inherit;
+    }
+
+}
+
+/*Menu de restautaciones taller y mantenimiento*/
+.menutaller{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+}
+    
+.restauraciones{
+    display: inline-block;
+    width: 250px;
+    height: 320px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    border: 5px solid #582C82;
+    border-radius: 10px;
+    filter: drop-shadow(-8px 8px 0px #582C82);
+    margin: 10px;
+}
+    
+.restauraciones img{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 25px;
+    top: 100px;
+    transition: opacity 0.3s;
+    opacity: 100;
+}
+    
+.restauraciones p{ 
+    position: absolute;
+    font-weight: 600;
+    font-size: 13px;
+    margin: 20px;
+    text-align: center;
+    top:90px;
+    color: #000000;
+    opacity: 0;
+}
+    
+.restauraciones:hover img{
+    opacity: 0;
+    transition: all 400ms;   
+}
+    
+    
+.restauraciones:hover h1{
+    color: #582C82;
+    transition: all 400ms;
+}
+    
+.restauraciones:hover p{
+    opacity: 100;
+    transition: all 400ms;
+}
+.restauraciones:hover{
+    background-color: #7EFFDB;
+    transition: all 400ms;
+    transform: scale(1.1);
+}
+    
+.restauraciones h1{
+    position: absolute;
+    font-weight: 800;
+    font-size: 19px;
+    line-height: 39px;
+    text-align: center;
+    left: 50px;
+    top:40px;
+    color: #000000;
+}
+
+
+.taller{
+    display: inline-block;
+    width: 250px;
+    height: 350px;
+    background: #FFFFFF;
+    border: 5px solid #582C82;
+    border-radius: 10px;
+    filter: drop-shadow(-8px 8px 0px #582C82);
+    margin: 10px;
+    text-align: center;
+}
+    
+.taller h1{
+    position: absolute;
+    font-weight: 800;
+    font-size: 19px;
+    line-height: 39px;
+    text-align: center;
+    left: 99px; top:40px;
+}
+
+.taller a{
+    text-decoration: none; 
+    text-align: center;
+    font-weight: 600;
+    font-size: 13px;
+    color: #000000;
+}
+
+.taller p{
+    width: 220px;
+    height: 100px;
+    position: absolute;
+    left: 13px;
+    top:110px;
+    font-weight: 600;
+    font-size: 13px;
+    text-align: center;
+    margin: 2px;
+}
+    
+.taller:hover{
+    transform: scale(1.1);
+    transition: all 400ms;
+}
+
+.taller .boton{
+    position: absolute;
+    width: 140px;
+    height: 50px;
+    top:60%;
+    background: #7EFFDB;
+    border: 4px solid #000000;
+    margin: 40px;
+}
+                
+.taller .boton:hover{
+    box-shadow: -6px 4px 0px #000000;
+    transition: all 400ms;
+    transform: scale(1.1);
+}
+
+.taller .boton a{
+    text-align: center;
+    font-style: normal;
+    font-size: 13px;
+    font-weight: 800;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+
+.mantenimiento{
+    display: inline-block;
+    width: 250px;
+    height: 320px;
+    background: #FFFFFF;
+    border: 5px solid #582C82;
+    border-radius: 10px;
+    filter: drop-shadow(-8px 8px 0px #582C82);
+    margin: 10px;
+}
+            
+.mantenimiento img{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 25px;
+    top: 100px;
+}
+
+.mantenimiento h1{
+    position: absolute;
+    font-weight: 800;
+    font-size: 19px;
+    line-height: 39px;
+    text-align: center;
+    left: 50px; top:40px;
+}
+
+.mantenimiento p{ 
+    position: absolute;
+    font-weight: 600;
+    font-size: 13px;
+    margin: 20px;
+    text-align: center;
+    top:90px;
+    color: #000000;
+    opacity: 0;
+}
+    
+.mantenimiento:hover img{
+    opacity: 0;
+    transition: all 400ms;   
+}
+
+.mantenimiento:hover h1{
+    color: #582C82;
+    transition: all 400ms;
+}
+
+.mantenimiento:hover p{
+    opacity: 100;
+    transition: all 400ms;
+}
+
+.mantenimiento:hover{
+    background-color: #7EFFDB;
+    transition: all 400ms;
+    transform: scale(1.1);
+}
+
+
+
+/*menú de bicicletas*/
+.menubicis{
+    text-align: center;
+}
+
+.conoce{
+    display: inline-block;
+    width: 830px;
+    height: 297px;
+    border: 5px solid #582C82;
+    box-shadow: -10px 10px 0px #582C82;
+    background-image: url(../img/conoce.png);
+    background-size:cover;
+    margin: 20px;
+    
+}
+
+
+.diseña{
+    display: inline-block;
+    width: 350px;
+    height: 350px;
+    border: 5px solid #582C82;
+    box-shadow: -10px 10px 0px #582C82;
+    background-image: url(../img/diseña.png);
+    background-size: cover;
+    margin: 40px;
+}
+    
+    
+.marcas{
+    display: inline-block;
+    width: 350px;
+    height: 350px;
+    border: 5px solid #582C82;
+    box-shadow: -10px 10px 0px #582C82;
+    background-image: url(../img/marcas.png);
+    background-size: cover;
+    margin: 40px;
+}
+/*Responsive para las imágines del menubicis*/
+@media screen and (max-width: 1050px){
+    .conoce{
+        width: 85vw;
+        height: inherit;
+    }
+        
+    .diseña{
+        width: 40vw;
+        height: inherit;
+        margin: 10px;
+    }
+        
+        
+    .marcas{
+        width: 40vw;
+        height: inherit;
+        margin: 10px;
+    }
+}
+
+/*CSS de los botones del menu bici*/
+.botonconoce{
+    width: 140px;
+    height: 45px;
+    background: #FFF085;
+    border: 4px solid #000000;
+    margin-top: 20%;
+    margin-left:40%;
+    text-align:center;
+}
+
+.botonconoce:hover{
+    box-shadow: -6px 4px 0px #000000;
+    transition: all 400ms;
+    transform: scale(1.1);
+}
+
+.botonconoce a{
+    text-align: center;
+    font-style: normal;
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+    color: #000000;
+}
+    
+.botondiseña{
+    width: 140px;
+    height: 45px;
+    background: #7EFFDB;
+    border: 4px solid #000000;
+    margin-top: 60%;
+    margin-left:29%;
+    text-align:center;
+}
+
+.botondiseña:hover{
+    box-shadow: -6px 4px 0px #000000;
+    transition: all 400ms;
+    transform: scale(1.1);
+}
+    
+.botondiseña a{
+    text-align: center;
+    font-style: normal;
+    font-size: 13px;
+    font-weight: 800;
+    padding-top: 10px;
+    padding-left: 10px;
+    text-decoration: none;
+    color: #000000;
+}
+    
+.botonmarcas:hover{
+    box-shadow: -6px 4px 0px #000000;
+    transition: all 400ms;
+    transform: scale(1.1);
+}
+
+.botonmarcas{
+    width: 140px;
+    height: 45px;
+    background: #FF9DE2;
+    border: 4px solid #000000;
+    margin-top: 60%;
+    margin-left:29%;
+    text-align:center;
+}
+    
+.botonmarcas a{
+    text-align: center;
+    font-style: normal;
+    font-size: 13px;
+    font-weight: 800;
+    padding-top: 10px;
+    padding-left: 10px;
+    text-decoration: none;
+    color: #000000;
+}
+
+/*Responsive de los botones del menubicis*/
+@media screen and (max-width: 1050px){
+    .botonconoce{
+        width: 140px;
+        height: 40px;
+        margin-top: 20%;
+        margin: 80px auto;
+    }
+    .botonconoce a{
+        font-size: 10px;
+    }
+
+    .botondiseña{
+        width: 140px;
+        height: 40px;
+        margin-top: 20%;
+        margin: 80px auto;
+    }
+    .botondiseña a{
+        font-size: 10px;
+    }
+
+    .botonmarcas{
+        width: 140px;
+        height: 40px;
+        margin-top: 20%;
+        margin: 80px auto;
+    }
+    .botonmarcas a{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 500px){
+    .botonconoce{
+        margin: 40px auto;
+    }
+    .botondiseña{
+        margin: 40px auto;
+    }
+    .botonmarcas{
+        margin: 40px auto;
+    }
+}
+
+/*CSS de la galería de imágenes*/
+.galeria{
+    background-image: url("../Fondos\ efectos/fondo\ galeria.png");
+    position: relative;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 900px;
+    height: 297px;
+    margin-bottom: 40px;
+    background-size: cover;
+}
+
+.slider-frame:hover{
+    transform: scale(1.2);
+}
+
+.slider-frame{
+    width: 650px;
+    height: 297px;
+    background-color: #582C82;
+	margin:50px auto 0px;
+	overflow: hidden; 
+}
+
+.slider-frame ul {
+    
+	display: flex;
+	padding: 0;
+	width: 400%;
+	animation: slide 25s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider-frame img {
+    background-size: cover;
+	width: 100%;
+}
+
+@keyframes slide {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+/*Responsive de la galería*/
+@media screen and (max-width: 1050px){
+    .galeria{
+        margin-top: 20px;
+        width: 80vw;
+        height: inherit;
+        margin-bottom: 30px;
+    }
+
+    .slider-frame{
+        width: 60vw;
+        height: 280px;
+    }
+    
+    .galeria img{
+        height: 280px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .slider-frame{
+        height: 250px;
+    }
+    
+    .galeria img{
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .slider-frame{
+        height: 200px;
+    }
+    
+    .galeria img{
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .slider-frame{
+        height: 150px;
+    }
+    
+    .galeria img{
+        height: 150px;
+    }
+}
+
+/*CSS del mapa y atender*/
+.mapa{
+    border: 5px solid #582C82;
+    box-shadow: -10px 10px 0px #582C82;
+    margin: 40px;
+    width: 550px;
+    height: 450px;
+    background: #FFFFFF;
+}
+
+.atender{
+    background: #FFFFFF;
+    border: 5px solid #582C82;
+    width: 300px;
+    height: 400px;
+    margin-top: 80px;
+    margin-inline: 60px;
+    text-align: center;
+}
+
+.atender img{
+    width: 30px;
+    height: auto;
+    margin-top: 30px; 
+}
+
+.atender h1{
+    padding-top: 40px;
+}
+
+.atender p{
+    padding-top: 10px;
+}
+
+
+/*Responsive del mapa y atender*/
+@media screen and (max-width: 1050px){
+    .mapa{
+        width: 400px;
+        margin-inline: 20px;
+    }
+    .atender{
+        margin-inline: 20px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .mapa_atender{
+        flex-direction: column;
+    }
+
+    .mapa{
+        margin: 0 auto;
+        width: 70vw;
+        background: #FFFFFF;
+    }
+
+    .atender{
+        margin: 0 auto;
+        width: 300px;
+        height: 400px;
+        margin-top: 80px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .mapa{
+        width: 80vw;
+        height: 350px;
+    }
+}
+
+/*CSS del botón Visítanos*/
+.atender .boton{
+    width: 140px;
+    height: 40px;
+    margin: 0 auto;
+    background: #7EFFDB;
+    border: 4px solid #000000;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.atender .boton p a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.atender .boton:hover{
+    box-shadow: -6px 4px 0px #000000;
+    transition: all 400ms;
+    transform: scale(1.1);
+}
+
+.atender .boton p{
+    font-style: normal;
+    font-weight: 800;
+    padding-top: 10px;
+}
+
+
+/*CSS del footer*/
+.footer {
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+    height:200px;
+    background:#000000;
+    width:100%;
+    margin-top: 40px;
+}
+
+.footer a{
+    color: #fff;
+    font-family: serif;
+    font-size: 15px
+}
+
+.footer section{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.izquierda{
+    margin-left: 150px;
+}
+
+.izquierda ul{
+    list-style: none;
+    display: flex;
+    margin-top: 20px;
+}
+
+.izquierda li{
+    margin-inline: 10px;
+}
+
+
+.medio .texto{
+    margin-top: 20px;
+}
+
+.footer img{
+    width: 250px;
+    height: auto;
+}
+
+.derecha{
+    margin-right: 150px;
+}
+
+.derecha .redes{
+    display: flex;
+}
+
+.footer .redes img{
+    width: 25px;
+    margin: 15px;
+}
+
+/*responsive del footer*/
+@media screen and (max-width: 1050px){
+    .footer {
+        height: 100%;
+        margin-top: 20px;
+        font-size: 10px
+    }
+
+    .footer a{
+        font-size: 10px
+    }
+
+    .footer section{
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .izquierda{
+        margin-left: 100px;
+    }
+
+    .izquierda ul{
+        margin-top: 15px;
+    }
+
+    .izquierda li{
+        margin-inline: 5px;
+    }
+
+    .footer img{
+        width: 200px;
+        height: auto;
+    }
+
+    .derecha{
+        margin-right: 100px;
+    }
+
+    .footer .redes img{
+        width: 20px;
+        margin: 15px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .footer {
+        height: auto;
+    }
+
+    .izquierda{
+        margin-left:30px;
+    }
+
+    .footer img{
+        width: 180px;
+        height: auto;
+    }
+
+    .derecha{
+        margin-right: 30px;
+    }
+
+    .footer .redes img{
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .footer {
+        display: block;
+        justify-content: center;
+        height: 450px;
+        margin-top: 50px;
+        font-size: 15px;
+    }
+    
+    .footer a{
+        font-size: 15px
+    }
+    
+    .footer section{
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    .izquierda{
+        margin: 0;
+    }
+    
+    .izquierda ul{
+        margin-top: 20px;
+        justify-content: center;
+    }
+    
+    .izquierda li{
+        margin-inline: 10px;
+    }
+    
+    
+    .medio .texto{
+        margin-top: 20px;
+    }
+    
+    .footer img{
+        width: 300px;
+        height: auto;
+    }
+    
+    .derecha{
+        margin: 0;
+    }
+    
+    .derecha .redes{
+        justify-content: center;
+    }
+    
+    .footer .redes img{
+        width: 25px;
+        margin: 15px;
+    }
+}
+
